@@ -78,3 +78,74 @@ console.log(startsWith2);
 function getLastChar(path) {
     return path[path.length - 1];
   }
+
+  const num = 5
+  const numTostring = num.toString()
+  console.log(num);
+  console.log(num === numTostring);
+
+  let x = "9.656"
+  Number.parseInt(0)
+  console.log(Number.parseInt(x));
+
+const evenOROdd = (num) =>  num % 2 === 0 ? "even number" : "odd number"
+console.log(evenOROdd(3));
+
+const students = ["Esmiralda", "Resul", "Emin", "Turan", "Aqsin"]
+console.log(students);
+
+students.push("Ilkin")
+console.log(students);
+
+students.pop()
+console.log(students);
+
+const firstName = students.unshift("Ilkin")
+console.log(firstName);
+console.log(students);
+
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+
+const myChildren = myGirls.concat(myBoys);
+const a = [...myBoys, ...myGirls]
+console.log(a);
+
+const  work = {
+  title: "Fullstack Developer",
+  slary: 7000
+}
+
+const person = {
+  name: "Emin",
+  surname: "Muradov"
+}
+
+const worker = {
+  ...work,
+  ...person
+}
+console.log(worker);
+
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let itemIndex = fruits.indexOf("Apple")
+fruits.splice(itemIndex, 1)
+console.log(fruits);
+
+// for(let i = 0; i < 4; i++){
+//  console.log("loop run");
+//  fruits.pop()
+// }
+
+fruits.map(value => {
+  console.log(value);
+})
+
+console.log(fruits);
+
+const numbers = [1, 2, 3, 4, 5]
+const numbers2 = []
+numbers.map(number => {
+  numbers2.push(number * 2);
+})
+console.log(numbers2);
