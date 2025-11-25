@@ -143,9 +143,137 @@ fruits.map(value => {
 
 console.log(fruits);
 
-const numbers = [1, 2, 3, 4, 5]
-const numbers2 = []
-numbers.map(number => {
-  numbers2.push(number * 2);
-})
-console.log(numbers2);
+//const numbers = [1, 2, 3, 4, 5]
+//const numbers2 = []
+//numbers.map(number => {
+  //numbers2.push(number * 2);
+//})
+//console.log(numbers2);
+
+// yeni tapsiriq
+
+function longWords(sentence){
+  return sentence.split(" ").filter(word => word.length > 4)
+}
+console.log(longWords("I love java script but I hate responsive desing"));
+
+function toUSD(arr) {
+  return arr.map(n => n + "USD");
+}
+console.log(toUSD([10, 20, 30]));
+
+function removeVowels(str) {
+  return str.replace(/[aeiouy]/gi, "");
+}
+console.log(removeVowels("JavaScript is awesome"));
+
+function capitalizeWord(arr){
+  return arr.map(w => w.charAt(0).toLocaleUpperCase() + w.slice(1))
+}
+console.log(capitalizeWord(["hello", "how are you", "hey my best friend"]));
+
+function multiples(arr){
+  return arr.filter(n => n % 3 ===0 || n % 5 === 0)
+}
+console.log(multiples([2, 5, 6, 9, 12, 18, 23]));
+
+function initals(name){
+  return name.split(" ").map(w => w[0].toUpperCase()).join(".")
+}
+console.log(initals("Emin Muradov"));
+
+function avg(arr){
+  let sum = arr.reduce((a, b) => a + b, 0)
+  return (sum / arr.length).toFixed(2)
+}
+console.log(avg([20, 40, 60, 80, 100]));
+
+function longestWord(sentence){
+  return sentence.split(" ").reduce((a , b) => a.length > b.length ? a : b)
+}
+console.log(longestWord("How amazing weadher good today"));
+
+function onlynumbers(arr){
+  return arr.filter(v => typeof v === "number")
+}
+console.log(onlynumbers([1, "Hello", 4, 7, "fruite", 23]));
+
+function onlyGmail(arr) {
+  return arr.filter(email => email.includes("@gmail.com"));
+}
+console.log(onlyGmail(["test@gmail.com", "hello@yahoo.com", "user@gmail.com", "test@cloud.com"]));
+
+function nameLengths(arr){
+  return arr.map(name => name.length)
+}
+console.log(nameLengths(["Emin", "Elshan", "Ali"]));
+
+// 12 ci tapsirigi anlamadim
+function isDigits(str){
+  return 
+}
+
+
+function squaredOver20(arr) {
+  return arr.map(n => n ** 2).filter(x => x > 20);
+}
+console.log(squaredOver20([2, 3, 5, 1, 12, 23]));
+
+function format(str){
+  return str.split(",").reverse().join("-")
+}
+console.log(format("b,t,r,g,h"));
+
+function filterShort(arr){
+  return arr.filter(  w => w.length >= 3)
+}
+console.log(filterShort(["hello", "hi", "class", "top", "genius", "IP"]));
+
+function countChar(str, ch) {
+  return str.split("").filter(c => c === ch).length;
+}
+console.log(countChar("Hello Boss", "IP", "master class"));
+
+function sumEven(arr){
+  return arr.filter(n => n % 2 === 0).reduce((a, b) => a + b, 0)
+}
+console.log(sumEven([2, 4, 7, 9, 12, 34]));
+
+function mapTopObjects(arr){
+  return arr.map(n => ({ value: n, isEven: n % 2 === 0}))
+}
+console.log(mapTopObjects([5, 7 , 9 , 1, 3, 2]));
+
+// 19 cu sual da yaza bilmedim
+
+
+function startsWithA(arr){
+  return arr.filter(w => w[0].toLowerCase() === "a")
+}
+console.log(startsWithA(["Allow", "Hello", "Ametis", "Class"]));
+
+// 21 ci tapsirigi anlamadim
+
+
+
+function halfRounds(arr){
+  return arr.map(n => Math.ceil(n / 2))
+}
+console.log(halfRounds([2, 5, 6, 8, 10]));
+
+function underScore(str){
+  return str.replace(/ /g, "_")
+}
+console.log(underScore("Hello how are you boss"));
+
+function adults(arr) {
+  return arr.filter(u => u.age > 18).map(u => u.name);
+}
+console.log(adults([
+  { name: "Emin", age: 23 },
+  { name: "Resul", age: 17 },
+  { name: "Elshan", age: 20 }
+]));
+
+
+// 25 sual anlamadim
